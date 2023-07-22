@@ -12,3 +12,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'database/master.sqlite3',
     }
 }
+
+
+AUTH_USER_MODEL = 'accounts.User'

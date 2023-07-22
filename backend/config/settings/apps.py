@@ -20,3 +20,7 @@ INSTALLED_APPS += [
 """
 Project Apps
 """
+INSTALLED_APPS += [
+    'accounts',
+    'todo',
+]
