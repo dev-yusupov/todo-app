@@ -18,6 +18,8 @@ class UserTests(TestCase):
         self.assertEqual(user.email, 'test1@test.com')
         self.assertEqual(user.first_name, 'Test')
         self.assertEqual(user.last_name, 'Testov')
+        self.assertEqual(user.get_email, "test1@test.com")
+        self.assertEqual(user.get_fullname, 'Test Testov')
         self.assertTrue(user.check_password('1234test'))
 
     def test_new_user_normalized_email(self):
