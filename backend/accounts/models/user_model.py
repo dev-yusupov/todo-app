@@ -14,6 +14,7 @@ from accounts.models.user_manager import UserManager
 class User(AbstractBaseUser, PermissionsMixin):
     """User model."""
     id = models.UUIDField(default=uuid4, primary_key=True, editable=False)
+    username = models.CharField(max_length=100, unique=True)
     email = models.EmailField(blank=False, null=False, unique=True)
     first_name = models.CharField(max_length=254)
     last_name = models.CharField(max_length=254)
