@@ -9,7 +9,7 @@ from rest_framework import status
 
 from .utils import create_jwt_token
 
-TOKEN_URL = reverse('accounts:token')
+TOKEN_URL = reverse('accounts:login')
 
 class PublicUserTests(TestCase):
     """Test cases for unauthenticated."""
