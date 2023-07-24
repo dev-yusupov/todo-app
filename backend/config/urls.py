@@ -18,6 +18,11 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from allauth.account.views import ConfirmEmailView
 from dj_rest_auth.registration.views import RegisterView, VerifyEmailView
+from drf_spectacular.views import (
+    SpectacularAPIView,
+    SpectacularRedocView,
+    SpectacularSwaggerView,
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +32,5 @@ urlpatterns = [
     path('accounts/api/v1/registration/', include('dj_rest_auth.registration.urls')),
     path('accounts/api/v1/registration/verify', VerifyEmailView.as_view()),
     re_path(r'^confirm-email/(?P<key>[-:\w]+)/$', ConfirmEmailView.as_view(), name='account_confirm_email'),
+    path('tasks/api/v1', include('todo.urls')),
 ]
