@@ -1,0 +1,9 @@
+nav.navbar {
+    display: flex;
+    font-display: row;
+    align-items: center;
+    justify-content: space-around;
+}
+nav.navbar .logo img {
+    width: 80px;
+}
