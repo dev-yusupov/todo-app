@@ -8,7 +8,7 @@ app_name='todo'
 
 routers = DefaultRouter()
 
-routers.register('', TaskViewSet)
+routers.register("", TaskViewSet)
 
 urlpatterns = [
     path('', include(routers.urls))
