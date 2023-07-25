@@ -30,7 +30,12 @@ urlpatterns = [
     path('accounts/api/v1/', include('allauth.urls')),
     path('accounts/api/v1/', include('dj_rest_auth.urls')),
     path('accounts/api/v1/registration/', include('dj_rest_auth.registration.urls')),
-    path('accounts/api/v1/registration/verify', VerifyEmailView.as_view()),
+    path('accounts/api/v1/registration/verify/', VerifyEmailView.as_view()),
     re_path(r'^confirm-email/(?P<key>[-:\w]+)/$', ConfirmEmailView.as_view(), name='account_confirm_email'),
-    path('tasks/api/v1', include('todo.urls')),
+    path('tasks/api/v1/', include("todo.urls")),
+    path("api/schema/", SpectacularAPIView.as_view(), name="api-schema"),
+    path("api/docs/", 
+         SpectacularSwaggerView.as_view(url_name="api-schema"),
+         name="api-docs"
+         ),
 ]
