@@ -1,6 +1,9 @@
-<div class="login-section">
-    <h1>TODO-APP</h1>
-    <form action="" method="post">
-        
-    </form>
-</div>
+<form [formGroup]="formGroup" (submit)="submit()">
+
+    <input id="first-name" type="email" formControlName="email">
+  
+    <input id="last-name" type="password" formControlName="password">
+
+    <button type="submit">Login</button>
+  
+  </form>

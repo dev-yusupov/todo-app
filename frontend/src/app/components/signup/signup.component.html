@@ -1,1 +1,8 @@
-<p>signup works!</p>
+<form [formGroup]="formGroup" (submit)="submit()">
+    <input type="text" name="" formControlName="username" id="" placeholder="Username">
+    <input type="email" name="" formControlName="email" id="" placeholder="Email">
+    <input type="password" name="" formControlName="password1" id="" placeholder="Password">
+    <input type="password" name="" formControlName="password2" id="" placeholder="Password">
+
+    <button type="submit">Sign Up</button>
+</form>

@@ -1,3 +1,12 @@
+:root {
+    --dark-purple: #544272;
+    --plum: #6F5897;
+    --burgundy: #71447B;
+    --maroon: #73305E;
+    --brick-red: #823152;
+}
+  
+
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +15,6 @@
 
 html {
     font-family: 'Maven Pro', sans-serif;
-    font-weight: 500;
+    font-size: 19px;
+    color: var(--plum)
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

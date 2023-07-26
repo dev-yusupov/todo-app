@@ -53,3 +53,15 @@ REST_AUTH = {
     'JWT_AUTH_REFRESH_COOKIE': 'auth-cookie-refresh',
 }
 SITE_ID = 1
+
+CORS_ALLOW_ORIGINS = [
+    'http://localhost:4200'
+]
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:4200',
+    'http://localhost:3000',
+    'http://localhost'
+)
+
+CORS_ALLOW_CREDENTIALS = True
