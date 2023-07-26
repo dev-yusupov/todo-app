@@ -29,13 +29,18 @@ export class LoginComponent implements OnInit {
     });
     
   }
-
+  response: any;
 
   submit(): void {
     this.http.post(`http://127.0.0.1:8000/accounts/api/v1/login/`, this.formGroup.getRawValue(), {
       withCredentials: true,
     }).subscribe((response) => {
-      this.router.navigate(['/'])
+      this.router.navigate(['/']);
+      this.response = response;
+      var token = this.response.access;
+      var refresh = this.response.refresh;
+      localStorage.setItem('token', token);
+      localStorage.setItem('refresh', refresh);
     });
   }
 }
